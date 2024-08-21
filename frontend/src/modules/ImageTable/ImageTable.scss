@@ -1,0 +1,102 @@
+.image-wrapper {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	border-radius: 10px;
+	position: relative;
+	&.loaded {
+		pointer-events: none;
+	}
+	img {
+		cursor: pointer;
+		-o-object-fit: cover;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+	.delete-btn-wrapper {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+	.delete {
+		border-radius: 50%;
+		height: 20px;
+		width: 20px;
+		background-color: var(--main-bg-color);
+		opacity: 0.75;
+		position: relative;
+		display: block;
+		cursor: pointer;
+		transition: opacity ease 0.3s;
+
+		svg {
+			fill: var(--main-elements-color);
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			margin: auto;
+		}
+		&:hover {
+			opacity: 1;
+		}
+		@media (hover: 'hover') {
+			&:hover {
+				opacity: 1;
+			}
+		}
+		@media (hover: 'none') {
+			&:active {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.image-list {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	min-height: 190px;
+	height: 100%;
+	width: 80%;
+	max-width: 1000px;
+	gap: 15px;
+	margin-top: 15px;
+
+	& > * {
+		-moz-box-align: stretch;
+		max-height: 100%;
+		display: flex;
+		flex: 1 1 0px;
+		flex-direction: column;
+		align-items: stretch;
+		row-gap: 15px;
+	}
+
+	@media (max-width: 900px) {
+		& {
+			width: 87%;
+		}
+	}
+	@media (max-width: 640px) {
+		& {
+			width: 95%;
+		}
+	}
+	@media (max-width: 550px) {
+		& {
+			width: 100%;
+			gap: 7px;
+		}
+		& > * {
+			row-gap: 7px;
+		}
+	}
+}

@@ -1,0 +1,42 @@
+body {
+	overflow-x: hidden;
+	background-color: var(--body-bg-color);
+}
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: auto;
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-size: inherit;
+	font-weight: inherit;
+}
+button {
+	cursor: pointer;
+}
+a {
+	cursor: pointer;
+}
+.App {
+	height: 100vh;
+}
+main {
+	flex: 1 1 auto;
+}
+[theme='dark'] input::-webkit-calendar-picker-indicator {
+	filter: invert(1);
+}
+.loaderImg {
+	background-color: var(--grey-color-1);
+}
+body.modalActive {
+	overflow-y: hidden;
+}

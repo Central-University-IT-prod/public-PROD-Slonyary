@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root,
+[theme='light'] {
+    --main-bg-color: #fff;
+    --body-bg-color: #fff;
+    --alternative-bg-color: #ebe6e6;
+    --alternative-bg-color--hover: rgba(174, 183, 194, 0.12);
+    --second-bg-color: rgb(222, 222, 222);
+    --main-elements-color: rgb(0, 0, 0);
+    --alpha-main: rgba(0, 0, 0, 0.8);
+    --alpha9: rgba(0, 0, 0, 0.9);
+    --alpha8: rgba(0, 0, 0, 0.8);
+    --alpha7: rgba(0, 0, 0, 0.7);
+    --alpha6: rgba(0, 0, 0, 0.6);
+    --alpha5: rgba(0, 0, 0, 0.5);
+    --alpha3: rgba(0, 0, 0, 0.3);
+    --alpha2: rgba(0, 0, 0, 0.2);
+    --alpha1: rgba(0, 0, 0, 0.1);
+    --delta-main: rgba(255, 255, 255, 1);
+    --delta7: rgba(255, 255, 255, 0.7);
+    --delta5: rgba(255, 255, 255, 0.5);
+    --grey-color-1: rgb(202, 202, 202);
+    --grey-color-2: rgb(146, 146, 146);
+    --carefully-color-1: #c50000;
+    --cancel-btn: var(--alpha5);
+    --cancel-btn-hover: var(--alpha7);
+    --green-color: #d2e3c8;
+    --green-color-2: #82b471;
+    --tff-color: #ffdd2d;
+
+    --basic-padding-horizontally: 15px;
+    --basic-padding-horizontally-wide: 20px;
+    --basic-padding-vertically: 10px;
+}
+
+:root,
+[theme='dark'] {
+    --main-bg-color: #222222;
+    --body-bg-color: #141414;
+    --alternative-bg-color: #292929;
+    --alternative-bg-color--hover: rgba(255, 255, 255, 0.08);
+    --second-bg-color: #424242;
+    --main-elements-color: rgb(225, 227, 230);
+    --alpha-main: rgba(255, 255, 255, 0.8);
+    --alpha9: rgba(255, 255, 255, 0.9);
+    --alpha8: rgba(255, 255, 255, 0.8);
+    --alpha7: rgba(255, 255, 255, 0.7);
+    --alpha6: rgba(255, 255, 255, 0.6);
+    --alpha5: rgba(255, 255, 255, 0.5);
+    --alpha3: rgba(255, 255, 255, 0.3);
+    --alpha2: rgba(255, 255, 255, 0.2);
+    --alpha1: rgba(255, 255, 255, 0.1);
+    --delta-main: rgba(0, 0, 0, 1);
+    --delta7: rgba(0, 0, 0, 0.7);
+    --delta5: rgba(0, 0, 0, 0.5);
+    --grey-color-1: rgb(134, 134, 134);
+    --grey-color-2: rgb(84, 84, 84);
+    --carefully-color-1: #db0e0e;
+    --cancel-btn: rgba(90, 90, 90, 0.5);
+    --cancel-btn-hover: rgba(90, 90, 90, 1);
+    --green-color: #307d03;
+    --green-color-2: #3ffb00;
+}
+
+@media (max-width: 800px) {
+    :root {
+        --basic-padding-horizontally: 10px;
+        --basic-padding-horizontally-wide: 15px;
+    }
+}
+
+button, input {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, a:visited {
+    color: #000;
+}
+
+.errorDiv {
+    display: flex;
+    min-height: 50vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+        font-size: 20px;
+        font-weight: 500;
+    }
+}

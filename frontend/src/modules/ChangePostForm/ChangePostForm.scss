@@ -1,0 +1,119 @@
+.doubleSpaces {
+	background-color: rgba(249, 249, 55, 0.51);
+}
+
+.AddPost_input {
+	margin-top: 5px;
+	border: 1px solid var(--alpha5);
+	border-radius: 5px;
+	padding: 10px 5px;
+}
+
+.ChangePostForm {
+	padding-bottom: 50px;
+	h2 {
+		font-size: 18px;
+		font-weight: 600;
+		color: var(--main-elements-color);
+	}
+
+	&-buttonGroup {
+		display: flex;
+		gap: 5px;
+
+		button {
+			display: flex;
+			align-items: center;
+			border: none;
+			padding: 5px;
+			border-radius: 5px;
+			background-color: transparent;
+			transition: background-color 0.2s linear;
+
+			&:hover {
+				background-color: var(--grey-color-1);
+			}
+
+			svg {
+				fill: #5578e3;
+			}
+		}
+	}
+
+	.fileInputLabel {
+		margin-top: 15px;
+		cursor: pointer;
+		width: 100%;
+		padding: 10px 10px;
+		text-align: center;
+		border: 2px solid #5578e3;
+		background-color: rgba($color: #5578e3, $alpha: 0.3);
+		box-sizing: border-box;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		color: #5578e3;
+		border-radius: 8px;
+		transition: background-color 0.2s ease;
+		margin-bottom: 10px;
+
+		&:hover {
+			background-color: rgba($color: #5578e3, $alpha: 0.5);
+		}
+	}
+
+	&-btnsbox {
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		margin-top: 15px;
+	}
+
+	&-spellchecking {
+		padding: 10px 15px;
+		background-color: rgba($color: #5578e3, $alpha: 0.4);
+		border-radius: 5px;
+		color: #000;
+	}
+
+	&-spellchecking-box {
+		margin-top: 20px;
+
+		h3 {
+			font-size: 16px;
+			font-weight: 600;
+			margin-bottom: 4px;
+		}
+	}
+	.chanelsToPost {
+		margin-top: 15px;
+		h2 {
+			text-align: center;
+		}
+		&-item {
+			border-radius: var(--alpha3);
+			padding: 10px 15px;
+			display: flex;
+			align-items: center;
+			border-bottom: 1px solid var(--alpha3);
+			gap: 15px;
+
+			h3 {
+				font-weight: 600;
+				font-size: 18px;
+			}
+		}
+		.noHaveChannels {
+			margin-top: 10px;
+			text-align: center;
+		}
+	}
+	.loader {
+		display: block;
+		margin: auto;
+		margin-top: 10px;
+	}
+}

@@ -1,0 +1,159 @@
+.post {
+  border-radius: 20px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.postItemTextContant {
+  margin-top: 15px;
+}
+
+.postInner {
+  padding: 24px;
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.leftText {
+  display: flex;
+  flex-direction: column;
+}
+.leftText h4 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.leftText p {
+  color: #e49701;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+}
+
+.publicised {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.publicised div {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+.publicised span {
+  font-size: 16px;
+  font-weight: 500;
+}
+.publicised.published div {
+  background-color: #7bf15d;
+}
+.publicised.published span {
+  color: #7bf15d;
+}
+.publicised.moderation div {
+  background-color: #5894ef;
+}
+.publicised.moderation span {
+  color: #5894ef;
+}
+.publicised.pending div {
+  background-color: #ffb13c;
+}
+.publicised.pending span {
+  color: #ffb13c;
+}
+
+.adminName {
+  font-size: 16px;
+  color: #a146cf;
+}
+
+.postImage {
+  cursor: pointer;
+}
+
+.postText {
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.bottomButtons {
+  margin-top: auto;
+  display: flex;
+  align-content: stretch;
+  justify-self: flex-end;
+}
+.bottomButtons button {
+  height: 60px;
+  width: 100%;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s;
+  opacity: 0.8;
+}
+.bottomButtons button:hover {
+  opacity: 1;
+}
+.bottomButtons .leftButton {
+  border-radius: 0 0 0 20px;
+}
+.bottomButtons .rightButton {
+  border-radius: 0 0 20px 0;
+}
+.bottomButtons .red {
+  background-color: #f15d5d;
+}
+.bottomButtons .grey {
+  background-color: #e6e6e6;
+}
+.bottomButtons .green {
+  background-color: #7bf15d;
+}
+.bottomButtons .orange {
+  background-color: #ffb13c;
+}
+
+.analytics {
+  margin-top: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.analytics p {
+  background: #d9d9d9;
+  border-radius: 20px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.analytics p span {
+  color: #484E57;
+}/*# sourceMappingURL=PostItem.module.css.map */

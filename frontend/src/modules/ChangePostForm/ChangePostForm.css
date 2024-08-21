@@ -1,0 +1,108 @@
+.doubleSpaces {
+  background-color: rgba(249, 249, 55, 0.51);
+}
+
+.AddPost_input {
+  margin-top: 5px;
+  border: 1px solid var(--alpha5);
+  border-radius: 5px;
+  padding: 10px 5px;
+}
+
+.ChangePostForm {
+  padding-bottom: 50px;
+}
+.ChangePostForm h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--main-elements-color);
+}
+.ChangePostForm-buttonGroup {
+  display: flex;
+  gap: 5px;
+}
+.ChangePostForm-buttonGroup button {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: background-color 0.2s linear;
+}
+.ChangePostForm-buttonGroup button:hover {
+  background-color: var(--grey-color-1);
+}
+.ChangePostForm-buttonGroup button svg {
+  fill: #5578e3;
+}
+.ChangePostForm .fileInputLabel {
+  margin-top: 15px;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 10px;
+  text-align: center;
+  border: 2px solid #5578e3;
+  background-color: rgba(85, 120, 227, 0.3);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #5578e3;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  margin-bottom: 10px;
+}
+.ChangePostForm .fileInputLabel:hover {
+  background-color: rgba(85, 120, 227, 0.5);
+}
+.ChangePostForm-btnsbox {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+.ChangePostForm-spellchecking {
+  padding: 10px 15px;
+  background-color: rgba(85, 120, 227, 0.4);
+  border-radius: 5px;
+  color: #000;
+}
+.ChangePostForm-spellchecking-box {
+  margin-top: 20px;
+}
+.ChangePostForm-spellchecking-box h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.ChangePostForm .chanelsToPost {
+  margin-top: 15px;
+}
+.ChangePostForm .chanelsToPost h2 {
+  text-align: center;
+}
+.ChangePostForm .chanelsToPost-item {
+  border-radius: var(--alpha3);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--alpha3);
+  gap: 15px;
+}
+.ChangePostForm .chanelsToPost-item h3 {
+  font-weight: 600;
+  font-size: 18px;
+}
+.ChangePostForm .chanelsToPost .noHaveChannels {
+  margin-top: 10px;
+  text-align: center;
+}
+.ChangePostForm .loader {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}/*# sourceMappingURL=ChangePostForm.css.map */

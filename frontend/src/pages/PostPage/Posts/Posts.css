@@ -1,0 +1,37 @@
+.status-filter {
+  display: flex;
+  gap: 10px;
+  max-width: 800px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.status-filter > * {
+  flex: 1 1 auto;
+}
+
+.addPostButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  background-color: #ffb13c;
+  box-shadow: 0 0 30px 6px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addPostButton span {
+  font-size: 38px;
+  color: #fff;
+  font-weight: 900;
+  transition: all 0.3s;
+}
+.addPostButton:visited {
+  color: #fff;
+}
+.addPostButton:hover span {
+  scale: 1.2;
+}/*# sourceMappingURL=Posts.css.map */

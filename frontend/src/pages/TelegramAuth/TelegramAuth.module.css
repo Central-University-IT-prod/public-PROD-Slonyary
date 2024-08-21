@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 50vh;
+}
+.main h4 {
+  font-size: 20px;
+  font-weight: 500;
+}/*# sourceMappingURL=TelegramAuth.module.css.map */

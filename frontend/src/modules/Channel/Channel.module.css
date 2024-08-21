@@ -1,0 +1,109 @@
+.main {
+  margin-top: 20px;
+  padding: 10px 0;
+  display: flex;
+  align-content: stretch;
+  width: 100%;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+}
+
+.avatarContainer {
+  width: 100%;
+  max-width: 10%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #d9d9d9;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.aboutChannel {
+  width: 100%;
+  max-width: 40%;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-right: 1px solid #d9d9d9;
+}
+.aboutChannel .title {
+  font-size: 20px;
+  font-weight: 500;
+}
+.aboutChannel .subscribers {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.posts {
+  width: 100%;
+  max-width: 30%;
+  padding: 20px 30px;
+  border-right: 1px solid #d9d9d9;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.postTitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.postStatus {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.postStatus div {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.postStatus .pending {
+  background-color: #E49701;
+}
+.postStatus .moderation {
+  background-color: #5894EF;
+}
+.postStatus p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.actions {
+  z-index: 2;
+  padding: 20px;
+  width: 100%;
+  max-width: 10%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.actions button {
+  cursor: pointer;
+}
+
+.popup {
+  position: absolute;
+  background: #d9d9d9;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  left: 10px;
+  bottom: -30px;
+}/*# sourceMappingURL=Channel.module.css.map */

@@ -1,0 +1,130 @@
+.MediaSlider__wrapper {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.MediaSlider__wrapper .media {
+  display: flex;
+  margin: auto;
+  max-width: 80%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  max-height: 97%;
+  right: 0;
+  left: 0;
+  align-items: center;
+}
+.MediaSlider__wrapper .media img,
+.MediaSlider__wrapper .media video {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.MediaSlider__wrapper .slider {
+  position: relative;
+  flex: 1 1 auto;
+}
+.MediaSlider__wrapper .control-btn {
+  z-index: 10;
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  flex: 1 1 auto;
+  content: "";
+  top: 0;
+}
+.MediaSlider__wrapper .control-btn.disabled {
+  pointer-events: none;
+  display: none;
+}
+.MediaSlider__wrapper .next-btn {
+  right: 0;
+}
+.MediaSlider__wrapper .next-btn svg {
+  right: 0;
+}
+.MediaSlider__wrapper .arrow-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.MediaSlider__wrapper .arrow-wrapper svg {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  stroke: #fff;
+  height: 40px;
+  width: 50px;
+  opacity: 0.4;
+  transition: opacity 0.2s linear;
+}
+@media (hover: hover) {
+  .MediaSlider__wrapper .control-btn:not(.disabled) .arrow-wrapper:hover svg {
+    opacity: 1;
+  }
+}
+@media (hover: none) {
+  .MediaSlider__wrapper .control-btn:not(.disabled) .arrow-wrapper:active svg {
+    opacity: 1;
+  }
+}
+.MediaSlider__wrapper .tool-bar-menu {
+  width: 100%;
+  padding: 8px 20px;
+  align-items: center;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.MediaSlider__wrapper .tool-bar-menu .close-modal {
+  width: 30px;
+  height: 30px;
+  opacity: 0.7;
+}
+.MediaSlider__wrapper .tool-bar-menu .close-modal span, .MediaSlider__wrapper .tool-bar-menu .close-modal::after {
+  background-color: #fff;
+}
+.MediaSlider__wrapper .tool-bar-menu .close-modal:hover {
+  opacity: 1;
+}
+@media (hover: hover) {
+  .MediaSlider__wrapper .tool-bar-menu .close-modal:hover {
+    opacity: 1;
+  }
+}
+@media (hover: none) {
+  .MediaSlider__wrapper .tool-bar-menu .close-modal:active {
+    opacity: 1;
+  }
+}
+.MediaSlider__wrapper .element-index {
+  font-family: "Nunito", sans-serif;
+}
+.MediaSlider__wrapper .element-index span {
+  color: #fff;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+.MediaSlider__wrapper .close-modal svg {
+  fill: #fff;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=MediaSlider.css.map */

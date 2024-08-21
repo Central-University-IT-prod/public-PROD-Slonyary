@@ -1,0 +1,115 @@
+.infoContainer {
+	display: flex;
+	gap: 24px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid #d9d9d9;
+	justify-content: space-between;
+	@media (max-width: 800px) {
+		flex-direction: column;
+	}
+}
+
+.left {
+	display: flex;
+	gap: 24px;
+}
+
+.avatar {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+
+.channelTitle {
+	font-weight: 500;
+	font-size: 24px;
+}
+
+.channelLink {
+	margin-top: 8px;
+	font-size: 14px;
+	font-weight: 400;
+	background-color: #e49701;
+	color: #fff;
+	border-radius: 20px;
+	padding: 5px 15px;
+	display: inline-block;
+	transition: all 0.3s;
+
+	&:hover {
+		scale: 1.2;
+	}
+}
+
+.channelDescription {
+	margin-top: 24px;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.members {
+	background-color: rgb(224 224 224);
+	border-radius: 20px;
+	padding: 20px 35px;
+	@media (max-width: 800px) {
+		padding: 20px;
+	}
+}
+
+.membersTitle {
+	font-size: 20px;
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.895);
+}
+
+.membersList {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.user {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.number {
+	font-size: 40px;
+	color: rgba(16, 16, 16, 0.645);
+	font-weight: 500;
+}
+
+.userName {
+	color: #26282c;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.userStatus {
+	text-transform: capitalize;
+
+	&.owner {
+		color: #ffb13c;
+	}
+
+	&.moderator {
+		color: #a146cf;
+	}
+
+	&.redactor {
+		color: #5894ef;
+	}
+}
+.memberLinks {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	a {
+		width: 100%;
+		display: block;
+	}
+}

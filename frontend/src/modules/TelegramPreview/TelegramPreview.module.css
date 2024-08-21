@@ -1,0 +1,211 @@
+.imagesGrid {
+  display: grid;
+  gap: 2px;
+  border-radius: 20px 20px 0 0;
+}
+.imagesGrid img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.imagesGrid img:nth-child(1) {
+  grid-area: a;
+}
+.imagesGrid img:nth-child(2) {
+  grid-area: b;
+}
+.imagesGrid img:nth-child(3) {
+  grid-area: c;
+}
+.imagesGrid img:nth-child(4) {
+  grid-area: d;
+}
+.imagesGrid img:nth-child(5) {
+  grid-area: e;
+}
+.imagesGrid img:nth-child(6) {
+  grid-area: f;
+}
+.imagesGrid img:nth-child(7) {
+  grid-area: g;
+}
+.imagesGrid img:nth-child(8) {
+  grid-area: h;
+}
+.imagesGrid img:nth-child(9) {
+  grid-area: i;
+}
+
+.length1 {
+  grid-template-areas: "a";
+}
+.length1 img {
+  max-height: 400px;
+  border-radius: 20px 20px 0 0;
+}
+
+.length2 {
+  grid-template-areas: "a b";
+}
+.length2 img {
+  max-height: 200px;
+}
+.length2 img:nth-child(1) {
+  border-radius: 20px 0 0 0;
+}
+.length2 img:nth-child(2) {
+  border-radius: 0 20px 0 0;
+}
+
+.TelegramPreviewWrapper {
+  background-color: rgba(0, 0, 0, 0.422);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.length3 {
+  grid-template-areas: "a a a a" "b b c c";
+}
+.length3 img {
+  max-height: 200px;
+}
+.length3 img:nth-child(1) {
+  border-radius: 20px 20px 0 0;
+}
+
+.length4 {
+  grid-template-areas: "a b" "c d";
+}
+.length4 img {
+  max-height: 200px;
+}
+.length4 img:nth-child(1) {
+  border-radius: 20px 0 0 0;
+}
+.length4 img:nth-child(2) {
+  border-radius: 0 20px 0 0;
+}
+
+.length5 {
+  grid-template-areas: "a a a a" "b b c c" "d d e e";
+}
+.length5 img {
+  max-height: 200px;
+}
+.length5 img:nth-child(1) {
+  border-radius: 20px 20px 0 0;
+}
+
+.length6 {
+  grid-template-areas: "a b" "c d" "e f";
+}
+.length6 img {
+  max-height: 200px;
+}
+.length6 img:nth-child(1) {
+  border-radius: 20px 0 0 0;
+}
+.length6 img:nth-child(2) {
+  border-radius: 0 20px 0 0;
+}
+
+.length7 {
+  grid-template-areas: "a a a a" "b b c c" "d d e e" "f f g g";
+}
+.length7 img {
+  max-height: 200px;
+}
+.length7 img:nth-child(1) {
+  border-radius: 20px 20px 0 0;
+}
+
+.length8 {
+  grid-template-areas: "a b" "c d" "e f" "g h";
+}
+.length8 img {
+  max-height: 200px;
+}
+.length8 img:nth-child(1) {
+  border-radius: 20px 0 0 0;
+}
+.length8 img:nth-child(2) {
+  border-radius: 0 20px 0 0;
+}
+
+.length9 {
+  grid-template-areas: "a b c" "d e f" "g h i";
+}
+.length9 img {
+  max-height: 200px;
+}
+.length9 img:nth-child(1) {
+  border-radius: 20px 0 0 0;
+}
+.length9 img:nth-child(3) {
+  border-radius: 0 20px 0 0;
+}
+
+.main {
+  position: relative;
+  padding: 20px 30px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.background {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: #fff;
+}
+.header button {
+  display: flex;
+  align-items: center;
+}
+
+.header h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.telegramMessage {
+  margin-top: 20px;
+  position: relative;
+  border-radius: 20px 20px 20px 0;
+  max-width: 400px;
+  background-color: #fff;
+}
+
+.textContainer {
+  padding: 20px;
+}
+
+.tail {
+  scale: 1.5;
+  transform: scaleX(-1);
+  position: absolute;
+  bottom: 1px;
+  left: -11px;
+}/*# sourceMappingURL=TelegramPreview.module.css.map */

@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 50vh;
+
+  h4 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}

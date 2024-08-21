@@ -1,0 +1,150 @@
+.main {
+  margin-top: 20px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-shadow: 0 0 5px 2px #00000033;
+  border-radius: 40px;
+  @media(max-width: 800px) {
+    flex-direction: column;
+  }
+}
+
+.avatarContainer {
+  width: 100%;
+  max-width: 10%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #d9d9d9;
+  @media(max-width: 800px) {
+    max-width: none;
+    border-right: 0;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 15px 0;
+  }
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.aboutChannel {
+  width: 100%;
+  max-width: 40%;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-right: 1px solid #d9d9d9;
+
+  @media(max-width: 800px) {
+    max-width: none;
+    border-right: 0;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 30px 0;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .subscribers {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+.posts {
+  width: 100%;
+  max-width: 30%;
+  padding: 20px 30px;
+  border-right: 1px solid #d9d9d9;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+
+  @media(max-width: 800px) {
+    max-width: none;
+    border-right: 0;
+    border-bottom: 1px solid #d9d9d9;
+    align-items: center;
+    padding: 30px 0;
+  }
+}
+
+.postTitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.postStatus {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  div {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+  }
+
+  .pending {
+    background-color: #E49701;
+  }
+
+  .moderation {
+    background-color: #5894EF;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.actions {
+  z-index: 2;
+  padding: 20px;
+  width: 100%;
+  max-width: 10%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    cursor: pointer;
+  }
+
+  @media(max-width: 800px) {
+    max-width: none;
+    align-items: center;
+    padding: 20px 0;
+  }
+}
+
+.popup {
+  position: absolute;
+  background: #d9d9d9;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  left: 10px;
+  bottom: -30px;
+  @media(max-width: 800px) {
+    left: 37%;
+    bottom: -30px;
+  }
+}

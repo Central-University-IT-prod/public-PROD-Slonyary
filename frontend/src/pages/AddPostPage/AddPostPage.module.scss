@@ -1,0 +1,24 @@
+.main {
+  position: relative;
+}
+
+.popup {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(#000, 0.5);
+}

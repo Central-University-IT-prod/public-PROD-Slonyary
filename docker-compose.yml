@@ -1,0 +1,130 @@
+version: "3.9"
+
+services:
+
+  database:
+    image: postgres:16.2-alpine3.19
+    container_name: prod-smm-database
+    restart: unless-stopped
+    volumes:
+      - "/var/prod/smm/db:/var/lib/postgresql/data"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: prod_smm
+      POSTGRES_USER: prod_smm
+      POSTGRES_PASSWORD: prod_smm
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U prod_smm -d prod_smm" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+  migrations:
+    build:
+      context: ./backend
+      dockerfile: ./migrations/Dockerfile
+    environment:
+      - DOMAIN=${API_DOMAIN:-localhost}
+      - POSTGRES_SERVER=database
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=prod_smm
+      - POSTGRES_USER=prod_smm
+      - POSTGRES_PASSWORD=prod_smm
+      - BOT_TOKEN=secret
+      - PROJECT_NAME=prodsmm
+      - FIRST_SUPERUSER=prodsmm
+      - FIRST_SUPERUSER_PASSWORD=prodsmm
+      - GPT_KEY=secret
+    depends_on:
+      database:
+        condition: service_healthy
+
+  api:
+    container_name: prod-smm-api
+    restart: unless-stopped
+    build:
+      context: ./backend
+      dockerfile: ./app/Dockerfile
+    ports:
+      - "8090:8090"
+    environment:
+      - DOMAIN=${API_DOMAIN:-localhost}
+      - POSTGRES_SERVER=database
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=prod_smm
+      - POSTGRES_USER=prod_smm
+      - POSTGRES_PASSWORD=prod_smm
+      - BOT_TOKEN=secret
+      - PROJECT_NAME=prodsmm
+      - FIRST_SUPERUSER=prodsmm
+      - FIRST_SUPERUSER_PASSWORD=prodsmm
+      - GPT_KEY=secret
+    depends_on:
+      - database
+      - migrations
+
+  scheduler:
+    container_name: prod-smm-scheduler
+    restart: unless-stopped
+    build:
+      context: ./backend
+      dockerfile: ./scheduler/Dockerfile
+    environment:
+      - DOMAIN=${API_DOMAIN:-localhost}
+      - POSTGRES_SERVER=database
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=prod_smm
+      - POSTGRES_USER=prod_smm
+      - POSTGRES_PASSWORD=prod_smm
+      - BOT_TOKEN=secret
+      - PROJECT_NAME=prodsmm
+      - FIRST_SUPERUSER=prodsmm
+      - FIRST_SUPERUSER_PASSWORD=prodsmm
+      - GPT_KEY=secret
+    depends_on:
+      - database
+      - migrations
+
+  frontend:
+    container_name: prod-smm-frontend
+    restart: unless-stopped
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    ports:
+      - "8089:80"
+    stdin_open: true
+    tty: true
+#
+#  redis:
+#    image: redis:7.2.1
+#    ports:
+#      - "6370:6379"
+#    volumes:
+#      - /var/prod/smm/redis:/data
+#    environment:
+#      - REDIS_PASSWORD=prod_smm
+#      - REDIS_PORT=6379
+#      - REDIS_DATABASES=2
+
+  bot:
+    container_name: prod-smm-bot
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./backend/bot/Dockerfile
+    environment:
+      - BOT_TOKEN=secret
+      - POSTGRES_SERVER=database
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=prod_smm
+      - POSTGRES_USER=prod_smm
+      - POSTGRES_PASSWORD=prod_smm
+      - GPT_KEY=secret
+
+    depends_on:
+      - database
+      - migrations

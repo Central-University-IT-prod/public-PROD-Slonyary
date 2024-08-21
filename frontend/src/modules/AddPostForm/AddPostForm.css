@@ -1,0 +1,143 @@
+.doubleSpaces {
+  background-color: rgba(249, 249, 55, 0.51);
+}
+
+.AddPost_input {
+  margin-top: 5px;
+  border: 1px solid var(--alpha5);
+  border-radius: 5px;
+  padding: 10px 5px;
+}
+
+.AddPostForm {
+  padding-bottom: 50px;
+}
+.AddPostForm h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--main-elements-color);
+}
+.AddPostForm-buttonGroup {
+  display: flex;
+  gap: 5px;
+}
+.AddPostForm-buttonGroup button {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: background-color 0.2s linear;
+}
+.AddPostForm-buttonGroup button:hover {
+  background-color: var(--grey-color-1);
+}
+.AddPostForm-buttonGroup button svg {
+  fill: #5578e3;
+}
+.AddPostForm .fileInputLabel {
+  margin-top: 15px;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 10px;
+  text-align: center;
+  border: 2px solid #5578e3;
+  background-color: rgba(85, 120, 227, 0.3);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #5578e3;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  margin-bottom: 10px;
+}
+.AddPostForm .fileInputLabel:hover {
+  background-color: rgba(85, 120, 227, 0.5);
+}
+.AddPostForm-btnsbox {
+  justify-content: center;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+.AddPostForm-spellchecking {
+  padding: 10px 15px;
+  background-color: rgba(85, 120, 227, 0.4);
+  border-radius: 5px;
+  color: #000;
+}
+.AddPostForm-gpt {
+  white-space: pre-line;
+}
+.AddPostForm-gpt-box {
+  padding: 20px 15px 25px 15px;
+  background-color: rgba(85, 120, 227, 0.4);
+  border-radius: 5px;
+  color: #000;
+  margin-top: 20px;
+}
+.AddPostForm-gpt-box h3 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.AddPostForm-spellchecking-box {
+  margin-top: 20px;
+}
+.AddPostForm-spellchecking-box h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.AddPostForm .gptButton {
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(27deg, #cbabff 0%, #4ccce8 100%);
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+}
+.AddPostForm .gptButton:disabled {
+  cursor: auto;
+  background: rgba(0, 0, 0, 0.12);
+  box-shadow: none;
+  color: rgba(0, 0, 0, 0.26);
+}
+.AddPostForm .chanelsToPost {
+  margin-top: 15px;
+}
+.AddPostForm .chanelsToPost h2 {
+  text-align: center;
+}
+.AddPostForm .chanelsToPost-item {
+  border-radius: var(--alpha3);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--alpha3);
+  gap: 15px;
+}
+.AddPostForm .chanelsToPost-item h3 {
+  font-weight: 600;
+  font-size: 18px;
+}
+.AddPostForm .chanelsToPost .noHaveChannels {
+  margin-top: 10px;
+  text-align: center;
+}
+.AddPostForm .loader {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+.AddPostForm .main-btn {
+  margin: auto;
+  margin-top: 20px;
+  display: block;
+}/*# sourceMappingURL=AddPostForm.css.map */

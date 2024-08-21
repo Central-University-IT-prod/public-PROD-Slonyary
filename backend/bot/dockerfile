@@ -1,0 +1,12 @@
+FROM python:3.11.5-slim-bullseye
+
+COPY ./backend/bot /bot
+COPY ./backend/shared /bot/shared
+COPY ./backend/requirements.txt .
+COPY ./.env /bot
+
+
+RUN pip3 install -r requirements.txt
+RUN pip3 install -r bot/requirements.txt
+
+CMD ["python3", "-u", "bot/main.py"]

@@ -1,0 +1,88 @@
+.navBar {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 10px 0px;
+  margin-bottom: 15px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @media(max-width: 600px) {
+    display: none;
+  }
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.link {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(#000, 0.6);
+  transition: all 0.3s;
+
+  &.active,
+  &:hover {
+    color: rgba(#000, 1);
+  }
+}
+
+.right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.userLogo {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  @media(max-width: 600px) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.userName {
+  font-size: 20px;
+  font-weight: 400;
+  @media(max-width: 600px) {
+    font-size: 18px;
+  }
+}
+
+.burgerMenu {
+  display: none;
+  @media(max-width: 600px) {
+    display: block;
+  }
+}
+
+.burgerMenuInner {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 50vw;
+}
+
+.burgerMenuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
